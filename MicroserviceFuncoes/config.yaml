@@ -1,0 +1,5 @@
+#configuração do rabbit usando protocolo AMQP (Advanced Message Queuing Protocol)
+AMQP_URI: amqp://${RABBIT_USER:user}:${RABBIT_PASSWORD:password}@${RABBIT_HOST:localhost}:${RABBIT_PORT:5672}/
+
+rpc_exchange: 'nameko-rpc' # Define onde as mensagens RPC serão publicadas e consumidas
+max_workers: 10 #Cada worker pode processar uma requisição por vez
